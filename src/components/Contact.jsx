@@ -23,16 +23,17 @@ const Contact = () => {
     setStatus({ type: "", message: "" });
     try {
       // EmailJS Configuration - You need to replace these with your actual IDs
-      const serviceID = "YOUR_SERVICE_ID"; // Replace with your EmailJS service ID
-      const templateID = "YOUR_TEMPLATE_ID"; // Replace with your EmailJS template ID
-      const publicKey = "YOUR_PUBLIC_KEY"; // Replace with your EmailJS public key
+      const serviceID = "service_2ce26rd"; // Replace with your EmailJS service ID
+      const templateID = "template_jc76whj"; // Replace with your EmailJS template ID
+      const publicKey = "yc9YohblZ8Bz-jJ5O"; // Replace with your EmailJS public key
       // Template parameters that will be sent in the email
       const templateParams = {
         from_name: formData.name,
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: "your-email@example.com", // Replace with your actual email
+        time: new Date().toTimeString(), // Current time
+        to_email: "aachi15.jsr@gmail.com", // Replace with your actual email
       };
       // Send email using EmailJS
       const response = await emailjs.send(
@@ -47,6 +48,10 @@ const Contact = () => {
           message: "Thank you for your message! I will get back to you soon.",
         });
         setFormData({ name: "", email: "", subject: "", message: "" });
+        const timeId = setTimeout(() => {
+          setStatus({ type: "", message: "" });
+        }, 3000);
+        return () => clearTimeout(timeId);
       }
     } catch (error) {
       console.error("EmailJS Error:", error);
@@ -55,6 +60,10 @@ const Contact = () => {
         message:
           "Sorry, there was an error sending your message. Please try again or contact me directly via email.",
       });
+      const timerId = setTimeout(() => {
+        setStatus({ type: "", message: "" });
+      }, 3000);
+      return () => clearTimeout(timerId);
     } finally {
       setIsLoading(false);
     }
@@ -113,7 +122,7 @@ const Contact = () => {
 
             <div className="form-group">
               <label htmlFor="name" className="label-small">
-                Name
+                Full Name
               </label>
 
               <input
@@ -125,6 +134,7 @@ const Contact = () => {
                 required
                 className="form-input"
                 disabled={isLoading}
+                placeholder="e.g. John Doe - so I know what to call you!"
               />
             </div>
 
@@ -142,6 +152,7 @@ const Contact = () => {
                 required
                 className="form-input"
                 disabled={isLoading}
+                placeholder="e.g. johndoe@example.com - I'll keep it safe, promise no spam."
               />
             </div>
 
@@ -159,6 +170,7 @@ const Contact = () => {
                 required
                 className="form-input"
                 disabled={isLoading}
+                placeholder="e.g. Let's collaborate / Job opportunity / Quick question"
               />
             </div>
 
@@ -176,6 +188,7 @@ const Contact = () => {
                 rows="5"
                 className="form-textarea"
                 disabled={isLoading}
+                placeholder="Got a role, project, feedback, or just want to talk code? I'm a Frontend Developer eager to grow - let's build something cool or simply connect."
               ></textarea>
             </div>
 
