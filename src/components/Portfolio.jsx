@@ -9,6 +9,7 @@ import Experience from "./Experience";
 import Timeline from "./Timeline";
 import Contact from "./Contact";
 import Footer from "./Footer";
+
 const Portfolio = () => {
   return (
     <div className="portfolio">
@@ -28,4 +29,5 @@ const Portfolio = () => {
     </div>
   );
 };
+
 export default Portfolio;
