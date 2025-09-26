@@ -1,15 +1,16 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-
+import Portfolio from "./components/Portfolio";
 function App() {
   return (
-    <>
-      <h1>My Portfolio</h1>
-      <p>
-        Welcome to my portfolio website. Here you can find my latest projects
-        and skills.
-      </p>
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Portfolio />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
-
 export default App;
