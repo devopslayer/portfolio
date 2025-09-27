@@ -1,6 +1,11 @@
 import React from "react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 import { personalInfo } from "../data/mock";
+import largestIcon from "../assets/images/largestIcon.png";
+import largerIcon from "../assets/images/largerIcon.png";
+import largeIcon from "../assets/images/largeIcon.png";
+import mediumIcon from "../assets/images/mediumIcon.png";
+import smallerIcon from "../assets/images/smallerIcon.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +14,18 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-main">
-            <div className="header-logo">FD</div>
+            <div className="header-logo">
+              <div className="logo-icon">
+                <picture>
+                  <source srcSet={largestIcon} media="(max-width: 512px)" />
+                  <source srcSet={largerIcon} media="(max-width: 192px)" />
+                  <source srcSet={largeIcon} media="(max-width: 180px)" />
+                  <source srcSet={smallerIcon} media="(max-width: 16px)" />
+                  <img src={mediumIcon} alt="Portfolio Logo" />
+                </picture>
+              </div>
+              <div className="logo-text">{personalInfo.name}</div>
+            </div>
             <p className="text-body footer-description">
               Frontend Developer passionate about creating exceptional digital
               experiences through clean, efficient code.
@@ -73,11 +89,14 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <span className="label-small">
-              © {currentYear} Frontend Developer. All rights reserved.
+              © {currentYear} <a href={personalInfo.github}>Devopslayer</a>. All
+              rights reserved.
             </span>
           </div>
           <div className="footer-note">
-            <span className="label-small">Built with React.js</span>
+            <span className="label-small">
+              Built with <Heart size={18} color="#ff3838" fill="red" /> Passion.
+            </span>
           </div>
         </div>
       </div>

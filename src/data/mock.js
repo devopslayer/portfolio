@@ -1,12 +1,13 @@
 // Mock data for Frontend Developer Portfolio
 export const personalInfo = {
-  name: "Frontend Developer",
+  name: "Anurag Dabbiru",
   title: "Frontend Developer",
   subtitle: "Crafting Digital Experiences Through Code",
   bio: "Passionate Frontend Developer with a strong foundation in modern web technologies. Continuously expanding skills through certifications and hands-on projects, with expertise in React, Angular, and TypeScript.",
-  email: "developer@email.com",
-  github: "https://github.com/developer",
-  linkedin: "https://linkedin.com/in/developer",
+  email: "aachi15.jsr@gmail.com",
+  github: "https://github.com/devopslayer",
+  linkedin: "https://linkedin.com/in/dabbiru-anurag-vijay",
+  resume: "/Dabbiru_Anurag_Vijay_Resume.pdf",
 };
 
 export const skills = [
