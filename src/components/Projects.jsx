@@ -60,6 +60,22 @@ const Projects = () => {
             </div>
           ))}
         </div>
+
+        <div className="projects-footer">
+          <p className="text-body projects-note">
+            Showcasing {projects.length} of 26+ projects from my development
+            journey.
+          </p>
+          <a
+            href="https://github.com/Devopslayer"
+            className="btn-accent projects-github-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Github size={16} />
+            <span>View All Projects on GitHub</span>
+          </a>
+        </div>
       </div>
     </section>
   );

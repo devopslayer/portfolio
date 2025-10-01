@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import Hero from "./Hero";
+import About from "./About";
+import KeyHighlight from "./KeyHighlight";
 import Skills from "./Skills";
 import Certifications from "./Certifications";
 import Projects from "./Projects";
@@ -17,11 +19,13 @@ const Portfolio = () => {
       <Header />
       <main>
         <Hero />
+        <About />
+        <Experience />
+        <Education />
+        <KeyHighlight />
         <Skills />
         <Certifications />
         <Projects />
-        <Experience />
-        <Education />
         <Timeline />
         <Contact />
       </main>

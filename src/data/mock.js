@@ -11,17 +11,52 @@ export const personalInfo = {
 };
 
 export const skills = [
-  { name: "React.js", level: "Advanced", category: "Frontend" },
-  { name: "Angular", level: "Advanced", category: "Frontend" },
-  { name: "JavaScript", level: "Advanced", category: "Programming" },
-  { name: "TypeScript", level: "Intermediate", category: "Programming" },
-  { name: "HTML5", level: "Advanced", category: "Frontend" },
-  { name: "CSS3", level: "Advanced", category: "Frontend" },
-  { name: "Bootstrap", level: "Intermediate", category: "Styling" },
-  { name: "Redux", level: "Intermediate", category: "State Management" },
-  { name: "Git & GitHub", level: "Intermediate", category: "Tools" },
-  { name: "Figma", level: "Basic", category: "Design" },
-  { name: "Python", level: "Basic", category: "Programming" },
+  { name: "React.js", level: "Advanced", category: "Frontend", type: "Tech" },
+  { name: "Angular", level: "Advanced", category: "Frontend", type: "Tech" },
+  {
+    name: "JavaScript",
+    level: "Advanced",
+    category: "Programming",
+    type: "Tech",
+  },
+  {
+    name: "TypeScript",
+    level: "Intermediate",
+    category: "Programming",
+    type: "Tech",
+  },
+  { name: "HTML5", level: "Advanced", category: "Frontend", type: "Tech" },
+  { name: "CSS3", level: "Advanced", category: "Frontend", type: "Tech" },
+  {
+    name: "Bootstrap",
+    level: "Intermediate",
+    category: "Styling",
+    type: "Tech",
+  },
+  {
+    name: "Redux",
+    level: "Intermediate",
+    category: "State Management",
+    type: "Tech",
+  },
+  {
+    name: "Git & GitHub",
+    level: "Intermediate",
+    category: "Tools",
+    type: "Tech",
+  },
+  {
+    name: "Python",
+    level: "Basic",
+    category: "Programming",
+    type: "Tech",
+  },
+  {
+    name: "Figma",
+    level: "Basic",
+    category: "Design",
+    type: "Non-Tech",
+  },
 ];
 
 export const certifications = [
@@ -117,17 +152,30 @@ export const education = [
     id: 1,
     degree: "Bachelor of Technology",
     field: "Computer Science and Engineering",
-    institution: "University",
-    duration: "Jun 2018 - Jun 2022",
+    institution: "Alliance University",
+    duration: "Jun 2018 - Nov 2022",
     status: "Completed",
+    collegeInfo: {
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQGwkQKXzJ_Piw/company-logo_200_200/company-logo_200_200/0/1688530624987/allianceuniofcl_logo?e=2147483647&v=beta&t=hf9aOaJ-lc-QgFNS96wYmNcA1dB7Sxv5t0AcA3MbEhA",
+      linkedin: "https://www.linkedin.com/school/allianceuniofcl/",
+      website: "https://www.alliance.edu.in/",
+      location: "Bangalore, India",
+    },
   },
   {
     id: 2,
     degree: "Diploma",
     field: "Computer Engineering",
-    institution: "Polytechnic College",
+    institution: "Nettur Technical Training Foundation (NTTF)",
     duration: "Jun 2014 - Jun 2017",
     status: "Completed",
+    collegeInfo: {
+      logo: "https://nttftrg.com/wp-content/uploads/2024/08/NTTF-logo.webp",
+      linkedin:
+        "https://www.linkedin.com/school/nttf-nettur-technical-training-foundation-/",
+      website: "https://nttftrg.com/",
+      location: "Bangalore, India",
+    },
   },
 ];
 
@@ -135,8 +183,8 @@ export const experience = [
   {
     id: 1,
     title: "Frontend Developer Intern",
-    company: "Tech Company",
-    duration: "Apr 2024 - May 2024",
+    company: "Pepsales AI",
+    duration: "Apr 2024 - Jun 2024",
     description:
       "Worked on frontend development projects using React.js and modern web technologies. Gained hands-on experience in collaborative development and agile methodologies.",
     responsibilities: [
@@ -145,11 +193,18 @@ export const experience = [
       "Participated in code reviews and team meetings",
       "Learned industry best practices and development workflows",
     ],
+    companyInfo: {
+      logo: "https://cdn.prod.website-files.com/66d402ff17bc21523bb8cd7e/66def04aa5ae8105d968e114_pepsales%20logo.svg",
+      linkedin: "https://www.linkedin.com/company/pep-sales/",
+      website: "https://www.pepsales.ai/",
+      location: "Bangalore, India",
+      hq: "San Francisco, California",
+    },
   },
   {
     id: 2,
     title: "Software Developer",
-    company: "Software Company",
+    company: "xLayer Technologies",
     duration: "Jun 2017 - Jun 2018",
     description:
       "Early career experience in software development, working with various technologies and learning fundamental programming concepts.",
@@ -159,6 +214,13 @@ export const experience = [
       "Worked with team members on collaborative projects",
       "Gained experience in problem-solving and debugging",
     ],
+    companyInfo: {
+      logo: "https://ik.imagekit.io/sbwxpfy3z/xlayerLogoColored.png",
+      linkedin: "https://www.linkedin.com/company/xlayercom",
+      website: "https://xlayertechnologies.com/",
+      location: "Bangalore, India",
+      hq: "Agartala, Tripura, India",
+    },
   },
 ];
 

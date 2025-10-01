@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-main">
             <div className="header-logo">
-              <div className="logo-icon">
+              <div className="header-logo-icon">
                 <picture>
                   <source srcSet={largestIcon} media="(max-width: 512px)" />
                   <source srcSet={largerIcon} media="(max-width: 192px)" />
@@ -38,6 +38,11 @@ const Footer = () => {
                 <li>
                   <a href="#hero" className="footer-link">
                     Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#about" className="footer-link">
+                    About
                   </a>
                 </li>
                 <li>

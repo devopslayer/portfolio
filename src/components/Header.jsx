@@ -9,10 +9,10 @@ import { personalInfo } from "../data/mock";
 
 const SECTIONS = [
   { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
   { id: "skills", label: "Skills" },
   { id: "certifications", label: "Certifications" },
   { id: "projects", label: "Projects" },
-  { id: "experience", label: "Experience" },
   { id: "contact", label: "Contact" },
 ];
 
@@ -59,7 +59,7 @@ const Header = () => {
       <div className="container">
         <div className="header-content">
           <div className="header-logo">
-            <div className="logo-icon">
+            <div className="header-logo-icon">
               <picture>
                 <source srcSet={largestIcon} media="(max-width: 512px)" />
                 <source srcSet={largerIcon} media="(max-width: 192px)" />

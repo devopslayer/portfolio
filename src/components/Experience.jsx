@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { experience } from "../data/mock";
 import { Briefcase } from "lucide-react";
+import ProfessionalEntityModal from "./ProfessionalEntityModal";
 
 const Experience = () => {
+  const [selectedCompany, setSelectedCompany] = useState(null);
+  const openModal = (companyInfo) => setSelectedCompany(companyInfo);
+  const closeModal = () => setSelectedCompany(null);
+
   return (
     <section id="experience" className="experience">
       <div className="container">
@@ -19,7 +24,15 @@ const Experience = () => {
               <div className="experience-content">
                 <div className="experience-header">
                   <h3 className="text-regular experience-title">{exp.title}</h3>
-                  <span className="experience-company">{exp.company}</span>
+                  <span
+                    className="experience-company"
+                    onClick={() =>
+                      openModal({ name: exp.company, ...exp.companyInfo })
+                    }
+                    title="Click to view company details"
+                  >
+                    {exp.company}
+                  </span>
                   <span className="experience-duration">{exp.duration}</span>
                 </div>
                 <p className="text-body experience-description">
@@ -37,6 +50,13 @@ const Experience = () => {
           ))}
         </div>
       </div>
+
+      {selectedCompany && (
+        <ProfessionalEntityModal
+          entityInfo={selectedCompany}
+          onClose={closeModal}
+        />
+      )}
     </section>
   );
 };
